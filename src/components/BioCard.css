@@ -1,0 +1,16 @@
+ion-card {
+  background-color: rgb(72, 85, 142);
+  text-align: center;
+}
+
+ion-card-title {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+ion-card-content {
+  color: rgb(239, 241, 243);
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+}
