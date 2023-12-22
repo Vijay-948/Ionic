@@ -3,7 +3,6 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
-  IonRouterContext,
 } from "@ionic/react";
 
 import "./BioCard.css";
