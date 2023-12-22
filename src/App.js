@@ -18,22 +18,29 @@ import { useState } from "react";
 
 import BioCard from "./components/BioCard";
 
+import { useStoredState } from "./lib/hook";
+
 const getToday = () => {
   return new Date().toISOString().slice(0, "yyyy-mm-dd".length);
 };
 
 function App() {
   const [name, setName] = useState("");
-  const [birthDate, setBirthDate] = useState("");
+  const [birthDate, setBirthDate] = useStoredState("birthDate", "");
   const [targetDate, setTargetDate] = useState(getToday);
   return (
     <IonApp>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Hello World</IonTitle>
+          <IonTitle color="primary" className="ion-text-center">
+            Hello World
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
+        {Boolean(birthDate) && (
+          <BioCard birthDate={birthDate} targetDate={targetDate} />
+        )}
         <IonList>
           <IonItem>
             <IonLabel position="fixed" color="primary">
@@ -71,7 +78,6 @@ function App() {
           Your Name: <b>{name} </b>, Born on: <b>{birthDate}</b> Target Date:{" "}
           <b>{targetDate}</b>
         </p> */}
-        <BioCard targetDate={targetDate} />
       </IonContent>
     </IonApp>
   );

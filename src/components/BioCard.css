@@ -9,8 +9,23 @@ ion-card-title {
 }
 
 ion-card-content {
-  color: rgb(239, 241, 243);
+  color: white;
   text-align: left;
   text-transform: capitalize;
   font-weight: bold;
+}
+
+.physical {
+  color: green;
+  text-transform: uppercase;
+}
+
+.emotional {
+  color: white;
+  text-transform: uppercase;
+}
+
+.intellectual {
+  color: red;
+  text-transform: uppercase;
 }
