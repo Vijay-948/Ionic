@@ -25,7 +25,7 @@ const BioCard = ({ birthDate, targetDate }) => {
         src="https://static.vecteezy.com/system/resources/thumbnails/023/230/156/small_2x/3d-happy-birthday-text-with-gift-boxes-and-glossy-balloon-bunch-over-blue-podium-png.png"
       />
       <IonCardHeader>
-        <IonCardTitle>{formatDate(targetDate)} </IonCardTitle>
+        <IonCardTitle>{formatDate(birthDate)} </IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
         <BiorhythmChart />
