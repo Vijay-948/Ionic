@@ -18,6 +18,7 @@ const formatDate = (isoString) => {
 
 const BioCard = ({ birthDate, targetDate }) => {
   const biorhythms = Bioryhythm(birthDate, targetDate);
+
   return (
     <IonCard className="biorhythm">
       <img
@@ -25,7 +26,7 @@ const BioCard = ({ birthDate, targetDate }) => {
         src="https://static.vecteezy.com/system/resources/thumbnails/023/230/156/small_2x/3d-happy-birthday-text-with-gift-boxes-and-glossy-balloon-bunch-over-blue-podium-png.png"
       />
       <IonCardHeader>
-        <IonCardTitle>{formatDate(birthDate)} </IonCardTitle>
+        <IonCardTitle>Happ Born Day: {formatDate(birthDate)} </IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
         <BiorhythmChart />
